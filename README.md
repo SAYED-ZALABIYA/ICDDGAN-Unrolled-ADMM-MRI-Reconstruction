@@ -32,6 +32,8 @@ The model is trained and evaluated on **fastMRI prostate (multi-coil)**.
 ```bash
 bash scripts/download_fastmri.sh
 
+---
+
 ## License
 All rights reserved.  
 This code is proprietary and may not be used, modified, or distributed without
