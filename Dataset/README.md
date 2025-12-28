@@ -28,12 +28,12 @@ Meta (Facebook AI Research) released a helper library to handle this data. I hig
 pip install fastmri
 ```
 
-# It includes standard utilities for cropping, masking, and SSIM math that is specifically tuned for MRI range values (addressing the normalization concern I mentioned earlier).
+It includes standard utilities for cropping, masking, and SSIM math that is specifically tuned for MRI range values (addressing the normalization concern I mentioned earlier).
 How to use the data once downloaded:
 Once you have the .h5 files:
 Organize them into multicoil_train/ and multicoil_val/ folders.
 
-# Update the DATA_ROOT variable in your code:
+Update the DATA_ROOT variable in your code:
 python
 DATA_ROOT = "/your/local/path/to/fastMRI_prostate"
 Ensure your kspace_max and coils_max in the config match the data (Prostate is typically 300–600 in resolution and up to 15–30 coils).
