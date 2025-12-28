@@ -23,21 +23,19 @@ Adjustment: You would need to change your target_hw (usually 256x256) and set co
 
 Meta (Facebook AI Research) released a helper library to handle this data. I highly recommend installing it alongside your code:
 
+### Download
 ```bash
-
 pip install fastmri
+
 It includes standard utilities for cropping, masking, and SSIM math that is specifically tuned for MRI range values (addressing the normalization concern I mentioned earlier).
 
 
 How to use the data once downloaded:
 Once you have the .h5 files:
-
 Organize them into multicoil_train/ and multicoil_val/ folders.
 Update the DATA_ROOT variable in your code:
 python
 
 DATA_ROOT = "/your/local/path/to/fastMRI_prostate"
-
-
 Ensure your kspace_max and coils_max in the config match the data (Prostate is typically 300–600 in resolution and up to 15–30 coils).
 Pro-tip: When starting, don't use the full dataset. Just download 2-3 .h5 files and try to run 1 epoch to ensure your GPU doesn't run out of memory (OOM), as raw k-space data is very heavy.
