@@ -20,13 +20,14 @@ Calgary-Campinas Public Dataset.
 Adjustment: You would need to change your target_hw (usually 256x256) and set coils_max to 12 or 32 in the config.
 
 ## 3. Developer Tools (The "fastmri" Library)
+
 Meta (Facebook AI Research) released a helper library to handle this data. I highly recommend installing it alongside your code:
----
+
 ```bash
 
 pip install fastmri
 It includes standard utilities for cropping, masking, and SSIM math that is specifically tuned for MRI range values (addressing the normalization concern I mentioned earlier).
----
+
 
 How to use the data once downloaded:
 Once you have the .h5 files:
